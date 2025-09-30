@@ -23,7 +23,7 @@
     "vite": "^7.1.7",
     "vitest": "^3.0.5",
     "vue": "^3.5.22",
-    "vue-tsc": "^3.0.8"
+    "vue-tsc": "^3.1.0"
   },
   "dependencies": {
     "@nmscd/coordinate-conversion": "^1.2.4",
