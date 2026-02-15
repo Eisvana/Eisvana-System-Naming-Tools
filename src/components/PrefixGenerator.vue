@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import GlyphInput from './GlyphInput.vue';
-import { maxGlyphLength } from '../variables/constants';
-import { computed } from 'vue';
-
-import { usePrefixDataStore } from '../stores/prefixData';
-import { storeToRefs } from 'pinia';
 import { getPrefix, getRegionNumber } from '@/logic/prefix';
+import GlyphInput from './GlyphInput.vue';
+import { computed } from 'vue';
+import { maxGlyphLength } from '../variables/constants';
+import { storeToRefs } from 'pinia';
+import { usePrefixDataStore } from '../stores/prefixData';
 
 const prefixDataStore = usePrefixDataStore();
 const { glyphs, glyphValues, systemName } = storeToRefs(prefixDataStore);

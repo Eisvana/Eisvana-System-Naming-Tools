@@ -1,5 +1,5 @@
-import { systemIndexLength } from '@/variables/constants';
 import { regionGlyphs } from '@/variables/regions';
+import { systemIndexLength } from '@/variables/constants';
 
 export function getRegionNumber(glyphs: string): number {
   const regionGlyphsSubstring = glyphs.slice(4);

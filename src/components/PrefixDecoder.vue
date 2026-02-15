@@ -1,10 +1,9 @@
 <script setup lang="ts">
+import { computed, watchEffect } from 'vue';
 import { eisvanaRegionAmount, systemIndexLength } from '../variables/constants';
 import { regionGlyphs } from '../variables/regions';
-import { computed, watchEffect } from 'vue';
-
-import { usePrefixDataStore } from '../stores/prefixData';
 import { storeToRefs } from 'pinia';
+import { usePrefixDataStore } from '../stores/prefixData';
 
 const prefixDataStore = usePrefixDataStore();
 const { prefix } = storeToRefs(prefixDataStore);
@@ -18,10 +17,10 @@ const isNotEisvana = computed(
   () =>
     prefix.value &&
     prefixParts.value.length === 2 &&
-    (isNaN(regionNumber.value) ||
+    (Number.isNaN(regionNumber.value) ||
       regionNumber.value < 1 ||
       regionNumber.value > eisvanaRegionAmount ||
-      systemIndex.value.toString(16).length > systemIndexLength)
+      systemIndex.value.toString(16).length > systemIndexLength),
 );
 
 const glyphs = computed(() => {
@@ -38,7 +37,9 @@ function resetTagDecoder() {
   prefix.value = '';
 }
 
-watchEffect(() => (prefix.value = prefix.value.toUpperCase()));
+watchEffect(() => {
+  prefix.value = prefix.value.toUpperCase();
+});
 </script>
 
 <template>

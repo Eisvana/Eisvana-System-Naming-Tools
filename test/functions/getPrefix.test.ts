@@ -1,5 +1,5 @@
-import { getPrefix } from '@/logic/prefix';
 import { describe, expect, it } from 'vitest';
+import { getPrefix } from '@/logic/prefix';
 
 describe('prefixCalculator', () => {
   it('should calculate the correct prefix', () => {

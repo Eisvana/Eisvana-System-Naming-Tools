@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { usePrefixDataStore } from '../stores/prefixData';
-import { storeToRefs } from 'pinia';
 import { maxCoordLength, maxGlyphLength, validInputRegex } from '../variables/constants';
+import { computed } from 'vue';
+import { storeToRefs } from 'pinia';
+import { usePrefixDataStore } from '../stores/prefixData';
 
 const prefixDataStore = usePrefixDataStore();
 const { glyphs, glyphValues } = storeToRefs(prefixDataStore);

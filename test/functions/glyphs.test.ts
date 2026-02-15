@@ -1,6 +1,6 @@
+import { describe, expect, it } from 'vitest';
 import { getRandomGlyphs } from '@/logic/glyphs';
 import { maxGlyphLength } from '@/variables/constants';
-import { describe, expect, it } from 'vitest';
 
 describe('glyphGenerator', () => {
   it('should have the correct output length', () => {

@@ -34,7 +34,7 @@ describe(PrefixGenerator, () => {
     expect(systemName.value).toBe('');
   });
 
-  it('should have the correct label', async () => {
+  it('should have the correct label', () => {
     const output = wrapper.find('.output-label');
 
     expect(output.text()).toBe('Prefix:');

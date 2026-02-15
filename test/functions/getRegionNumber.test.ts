@@ -1,5 +1,5 @@
-import { getRegionNumber } from '@/logic/prefix';
 import { describe, expect, it } from 'vitest';
+import { getRegionNumber } from '@/logic/prefix';
 
 describe('regionNumberCalculator', () => {
   it('should calculate the correct region number', () => {

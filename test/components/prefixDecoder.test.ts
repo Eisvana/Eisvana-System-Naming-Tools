@@ -32,7 +32,7 @@ describe(PrefixDecoder, () => {
     expect(prefix.value).toBe('');
   });
 
-  it('should render correctly when bad regions are entered', async () => {
+  it('should render correctly when bad regions are entered', () => {
     const store = usePrefixDataStore(pinia);
     const { prefix } = storeToRefs(store);
     prefix.value = 'EV8-69';
@@ -40,7 +40,7 @@ describe(PrefixDecoder, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('should render correctly when bad regions are entered', async () => {
+  it('should render correctly when bad regions are entered', () => {
     const store = usePrefixDataStore(pinia);
     const { prefix } = storeToRefs(store);
     prefix.value = 'EV5-AB69';
@@ -48,7 +48,7 @@ describe(PrefixDecoder, () => {
     expect(wrapper.html()).toMatchSnapshot();
   });
 
-  it('should render correctly when bad regions are entered', async () => {
+  it('should render correctly when bad regions are entered', () => {
     const store = usePrefixDataStore(pinia);
     const { prefix } = storeToRefs(store);
     prefix.value = 'EV0-69';

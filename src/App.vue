@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import NavBar from './components/NavBar.vue';
-import PrefixGenerator from './components/PrefixGenerator.vue';
 import PrefixDecoder from './components/PrefixDecoder.vue';
+import PrefixGenerator from './components/PrefixGenerator.vue';
 import PrefixQuiz from './components/PrefixQuiz.vue';
 </script>
 

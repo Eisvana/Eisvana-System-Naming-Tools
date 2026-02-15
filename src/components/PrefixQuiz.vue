@@ -1,9 +1,9 @@
 <script setup lang="ts">
+import { computed, ref } from 'vue';
 import type { QuizSystem } from '@/types/types';
+import { getPrefix } from '@/logic/prefix';
 import { getRandomGlyphs } from '@/logic/glyphs';
 import { glyphs2Coords } from '@/logic/coordGlyphConvert';
-import { getPrefix } from '@/logic/prefix';
-import { computed, ref } from 'vue';
 
 const quizSystem = ref<QuizSystem>(generateQuizSystem());
 
@@ -19,7 +19,9 @@ function generateQuizSystem(): QuizSystem {
   };
 }
 
-const newQuizSystem = () => (quizSystem.value = generateQuizSystem());
+function newQuizSystem() {
+  quizSystem.value = generateQuizSystem();
+}
 
 const isPrefixCorrect = computed(() => quizSystem.value.inputName.startsWith(quizSystem.value.expectedPrefix));
 

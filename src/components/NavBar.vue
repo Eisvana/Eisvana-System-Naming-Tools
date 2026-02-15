@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ThemeSwitch from './ThemeSwitch.vue';
 
-const isEisvanaHost = window.location.host === 'naming.eisvana.com';
+const isEisvanaHost = globalThis.location.host === 'naming.eisvana.com';
 </script>
 
 <template>
