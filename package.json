@@ -1,7 +1,7 @@
 {
   "name": "eisvana-system-naming-tools",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,6 +13,10 @@
     "lint:ci": "oxlint --deny-warnings",
     "test": "vitest",
     "test:ci": "vitest run"
+  },
+  "dependencies": {
+    "@nmscd/coordinate-conversion": "^1.2.4",
+    "@picocss/pico": "^2.1.1"
   },
   "devDependencies": {
     "@pinia/testing": "^1.0.3",
@@ -29,9 +33,5 @@
     "vitest": "^4.0.4",
     "vue": "^3.5.28",
     "vue-tsc": "^3.2.4"
-  },
-  "dependencies": {
-    "@nmscd/coordinate-conversion": "^1.2.4",
-    "@picocss/pico": "^2.1.1"
   }
 }

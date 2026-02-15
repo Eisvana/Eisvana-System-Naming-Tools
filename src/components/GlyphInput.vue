@@ -24,10 +24,7 @@ function deleteGlyph() {
 }
 
 function lintGlyphs() {
-  glyphs.value = [...glyphs.value
-    .toUpperCase()]
-    .filter((char) => validInputRegex.test(char))
-    .join('');
+  glyphs.value = [...glyphs.value.toUpperCase()].filter((char) => validInputRegex.test(char)).join('');
 }
 
 const numberToGlyph = (n: number) => n.toString(16).toUpperCase(); // NoSonar this is dec to hex

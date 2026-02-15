@@ -13,7 +13,6 @@ export default defineConfig({
   },
   test: {
     // options for vitest
-    globals: true,  // needs to be set for
     environment: 'happy-dom',
     coverage: {
       include: ['src/**.{ts,vue}', 'src/**/**.{ts,vue}'],
