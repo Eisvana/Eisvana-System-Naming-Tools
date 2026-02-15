@@ -7,8 +7,12 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "lint:ci": "oxlint --deny-warnings",
     "test": "vitest",
-    "test-ci": "vitest run"
+    "test:ci": "vitest run"
   },
   "devDependencies": {
     "@pinia/testing": "^1.0.3",
@@ -17,8 +21,9 @@
     "@vitest/coverage-v8": "^4.0.18",
     "@vue/test-utils": "^2.4.6",
     "happy-dom": "^20.5.3",
+    "oxfmt": "^0.32.0",
+    "oxlint": "^1.47.0",
     "pinia": "^3.0.4",
-    "prettier": "^3.8.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
     "vitest": "^4.0.4",
