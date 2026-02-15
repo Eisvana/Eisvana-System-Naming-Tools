@@ -8,6 +8,6 @@ describe('glyphGenerator', () => {
   });
 
   it('generates a valid hex number', () => {
-    expect(parseInt(getRandomGlyphs(), 16)).not.toBeNaN();
+    expect(Number.parseInt(getRandomGlyphs(), 16)).not.toBeNaN();
   });
 });

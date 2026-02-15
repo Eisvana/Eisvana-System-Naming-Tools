@@ -17,7 +17,7 @@ function getRandomRegion(): string {
 }
 
 function getRandomSIV(): string {
-  const decId = getRandomNumber(1, 768); // 768 is 300 in Hex, which is not possible as a system ID
+  const decId = getRandomNumber(1, 0x3_00); // 768 is 300 in Hex, which is not possible as a system ID
   const hexId = decId.toString(16).toUpperCase();
   const SIV = hexId.padStart(3, '0');
   return SIV;

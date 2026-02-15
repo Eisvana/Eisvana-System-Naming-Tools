@@ -1,8 +1,8 @@
 import ThemeSwitch from '@/components/ThemeSwitch.vue';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { mount, type VueWrapper } from '@vue/test-utils';
+import { type VueWrapper, mount } from '@vue/test-utils';
 
-describe('ThemeSwitch', () => {
+describe(ThemeSwitch, () => {
   let wrapper: VueWrapper;
 
   beforeEach(() => {

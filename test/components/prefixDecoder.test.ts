@@ -1,11 +1,11 @@
 import PrefixDecoder from '@/components/PrefixDecoder.vue';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { mount, type VueWrapper } from '@vue/test-utils';
+import { type VueWrapper, mount } from '@vue/test-utils';
 import { createTestingPinia } from '@pinia/testing';
 import { usePrefixDataStore } from '@/stores/prefixData';
 import { storeToRefs } from 'pinia';
 
-describe('PrefixDecoder', () => {
+describe(PrefixDecoder, () => {
   let wrapper: VueWrapper;
   const pinia = createTestingPinia();
 

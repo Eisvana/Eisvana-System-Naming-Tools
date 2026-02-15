@@ -1,8 +1,8 @@
 import PrefixQuiz from '@/components/PrefixQuiz.vue';
-import { vi, beforeEach, describe, expect, it } from 'vitest';
-import { mount, type VueWrapper } from '@vue/test-utils';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { type VueWrapper, mount } from '@vue/test-utils';
 
-describe('PrefixQuiz', () => {
+describe(PrefixQuiz, () => {
   let wrapper: VueWrapper;
 
   beforeEach(() => {

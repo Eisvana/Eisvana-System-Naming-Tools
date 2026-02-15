@@ -24,9 +24,8 @@ function deleteGlyph() {
 }
 
 function lintGlyphs() {
-  glyphs.value = glyphs.value
-    .toUpperCase()
-    .split('')
+  glyphs.value = [...glyphs.value
+    .toUpperCase()]
     .filter((char) => validInputRegex.test(char))
     .join('');
 }

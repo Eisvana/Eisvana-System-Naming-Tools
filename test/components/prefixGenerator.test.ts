@@ -1,11 +1,11 @@
 import PrefixGenerator from '@/components/PrefixGenerator.vue';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { mount, type VueWrapper } from '@vue/test-utils';
+import { type VueWrapper, mount } from '@vue/test-utils';
 import { createTestingPinia } from '@pinia/testing';
 import { usePrefixDataStore } from '@/stores/prefixData';
 import { storeToRefs } from 'pinia';
 
-describe('PrefixGenerator', () => {
+describe(PrefixGenerator, () => {
   let wrapper: VueWrapper;
   const pinia = createTestingPinia();
 

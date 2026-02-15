@@ -9,9 +9,9 @@ export function getRegionNumber(glyphs: string): number {
 
 export function getPrefix(glyphs: string): string {
   const systemIndexString = glyphs.slice(1, 4);
-  const systemIndex = parseInt(systemIndexString, 16);
+  const systemIndex = Number.parseInt(systemIndexString, 16);
   const regionNumber = getRegionNumber(glyphs);
-  if (!regionNumber || isNaN(systemIndex) || systemIndexString.length !== systemIndexLength) return '';
+  if (!regionNumber || Number.isNaN(systemIndex) || systemIndexString.length !== systemIndexLength) return '';
   const expectedIndex = systemIndex.toString(16).toUpperCase();
   return `EV${regionNumber}-${expectedIndex}`;
 }

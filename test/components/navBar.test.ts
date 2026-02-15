@@ -1,8 +1,8 @@
 import NavBar from '@/components/NavBar.vue';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { mount, type VueWrapper } from '@vue/test-utils';
+import { type VueWrapper, mount } from '@vue/test-utils';
 
-describe('NavBar', () => {
+describe(NavBar, () => {
   let wrapper: VueWrapper;
 
   beforeEach(() => {

@@ -11,8 +11,8 @@ const { prefix } = storeToRefs(prefixDataStore);
 
 const prefixParts = computed(() => prefix.value.toLowerCase().replace('ev', '').split('-'));
 
-const regionNumber = computed(() => parseInt(prefixParts.value[0]));
-const systemIndex = computed(() => parseInt(prefixParts.value[1], 16));
+const regionNumber = computed(() => Number.parseInt(prefixParts.value[0]));
+const systemIndex = computed(() => Number.parseInt(prefixParts.value[1], 16));
 
 const isNotEisvana = computed(
   () =>
