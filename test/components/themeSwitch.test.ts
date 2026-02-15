@@ -1,12 +1,13 @@
-import ThemeSwitch from '@/components/ThemeSwitch.vue';
-import { beforeEach, describe, expect, it } from 'vitest';
 import { type VueWrapper, mount } from '@vue/test-utils';
+import { beforeEach, describe, expect, it } from 'vitest';
+import ThemeSwitchComponent from '@/components/ThemeSwitch.vue';
 
+const ThemeSwitch = () => ThemeSwitchComponent;
 describe(ThemeSwitch, () => {
   let wrapper: VueWrapper;
 
   beforeEach(() => {
-    wrapper = mount(ThemeSwitch);
+    wrapper = mount(ThemeSwitchComponent);
   });
 
   it('should render correctly', () => {

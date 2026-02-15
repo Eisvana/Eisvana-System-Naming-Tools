@@ -1,15 +1,17 @@
-import PrefixQuiz from '@/components/PrefixQuiz.vue';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { type VueWrapper, mount } from '@vue/test-utils';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import PrefixQuizComponent from '@/components/PrefixQuiz.vue';
 
+vi.mock('@/logic/glyphs', () => ({
+  getRandomGlyphs: vi.fn().mockReturnValue('0001A21117FF'),
+}));
+
+const PrefixQuiz = () => PrefixQuizComponent;
 describe(PrefixQuiz, () => {
   let wrapper: VueWrapper;
 
   beforeEach(() => {
-    wrapper = mount(PrefixQuiz);
-    vi.mock('@/logic/glyphs', () => ({
-      getRandomGlyphs: vi.fn().mockReturnValue('0001A21117FF'),
-    }));
+    wrapper = mount(PrefixQuizComponent);
   });
 
   it('should render correctly', () => {

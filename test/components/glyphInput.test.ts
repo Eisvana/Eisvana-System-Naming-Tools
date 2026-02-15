@@ -1,17 +1,17 @@
-import type { VueWrapper} from '@vue/test-utils';
-import { mount } from '@vue/test-utils';
-import { usePrefixDataStore } from '@/stores/prefixData';
-import GlyphInput from '@/components/GlyphInput.vue';
+import { type VueWrapper, mount } from '@vue/test-utils';
 import { beforeEach, describe, expect, it } from 'vitest';
+import GlyphInputComponent from '@/components/GlyphInput.vue';
 import { createTestingPinia } from '@pinia/testing';
 import { storeToRefs } from 'pinia';
+import { usePrefixDataStore } from '@/stores/prefixData';
 
+const GlyphInput = () => GlyphInputComponent;
 describe(GlyphInput, () => {
   let wrapper: VueWrapper;
   const pinia = createTestingPinia();
 
   beforeEach(() => {
-    wrapper = mount(GlyphInput, {
+    wrapper = mount(GlyphInputComponent, {
       global: {
         plugins: [pinia],
       },
