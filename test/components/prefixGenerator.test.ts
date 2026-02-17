@@ -1,5 +1,5 @@
 import { type VueWrapper, mount } from '@vue/test-utils';
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import PrefixGeneratorComponent from '@/components/PrefixGenerator.vue';
 import { createTestingPinia } from '@pinia/testing';
 import { storeToRefs } from 'pinia';
@@ -8,7 +8,7 @@ import { usePrefixDataStore } from '@/stores/prefixData';
 const PrefixGenerator = () => PrefixGeneratorComponent;
 describe(PrefixGenerator, () => {
   let wrapper: VueWrapper;
-  const pinia = createTestingPinia();
+  const pinia = createTestingPinia({ createSpy: vi.fn });
 
   beforeEach(() => {
     wrapper = mount(PrefixGeneratorComponent, {
