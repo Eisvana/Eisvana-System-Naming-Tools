@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@pinia/testing": "^1.0.3",
-    "@types/node": "^25.9.2",
+    "@types/node": "^26.0.1",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vitest/coverage-v8": "^4.1.9",
     "@vue/test-utils": "^2.4.11",
