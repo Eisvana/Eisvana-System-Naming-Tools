@@ -22,7 +22,7 @@
     "@pinia/testing": "^2.0.1",
     "@types/node": "^26.2.0",
     "@vitejs/plugin-vue": "^6.0.8",
-    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/coverage-v8": "^4.1.11",
     "@vue/test-utils": "^2.4.11",
     "happy-dom": "^20.11.2",
     "oxfmt": "^0.64.0",
