@@ -24,7 +24,7 @@
     "@vitejs/plugin-vue": "^6.0.8",
     "@vitest/coverage-v8": "^4.1.11",
     "@vue/test-utils": "^2.4.11",
-    "happy-dom": "^20.11.2",
+    "happy-dom": "^20.11.12",
     "oxfmt": "^0.64.0",
     "oxlint": "^1.79.0",
     "pinia": "^4.0.2",
